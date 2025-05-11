@@ -505,19 +505,20 @@ a:focus {
 .footer_section a {
   color: #191818;
 }
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
-
-.footer {
-  position: fixed;
-  /* top: 50%; */
-  /* left: 0; */
-  /* bottom: 0; */
-  padding: 40px 0;
-  /* transform: translate(-50%, -50%); */
-  /* max-width: 1280px; */
-  width: 100%;
-  background: #10182F;
-  border-radius: 6px;
+ @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"): {
+  .footer {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    border-radius: 6px; 
+    padding: 40px 0;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    /*top: 50%;
+    max-width: 1280px; 
+    background: #10182F;
+    */
+  }
 }
 
 .footer .footer-row {
@@ -525,7 +526,9 @@ a:focus {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 3.5rem;
-  /* padding: 60px; */
+  padding: 30px;
+  background: #10182F;
+  left: 0;
 }
 
 .footer-row .footer-col h4 {
