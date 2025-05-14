@@ -505,20 +505,19 @@ a:focus {
 .footer_section a {
   color: #191818;
 }
- @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"): {
-  .footer {
-    position: fixed;
-    transform: translate(-50%, -50%);
-    border-radius: 6px; 
-    padding: 40px 0;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    /*top: 50%;
-    max-width: 1280px; 
-    background: #10182F;
-    */
-  }
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+.footer {
+  position: relative;
+  /* transform: 0; */
+  border-radius: 6px; 
+  padding: 40px 0;
+  width: 100%;
+  /* left: 0; */
+  top: 50%;
+  /* max-width: 1280px; */
+  background: #131e3d;
 }
 
 .footer .footer-row {
@@ -528,7 +527,7 @@ a:focus {
   gap: 3.5rem;
   padding: 30px;
   background: #10182F;
-  left: 0;
+  left: 20px;
 }
 
 .footer-row .footer-col h4 {
@@ -603,6 +602,9 @@ a:focus {
   gap: 30px;
   cursor: pointer;
 }
+.footer-col-md-3 .social-container h5 {
+
+}
 
 .footer-col .icons i {
   color: #afb6c7;
@@ -612,7 +614,8 @@ a:focus {
   color: #fff;
 }
 
-@media (max-width: 768px) {
+
+/* @media (max-width: 768px) {
   .footer {
     position: relative;
     bottom: 0;
@@ -638,6 +641,6 @@ a:focus {
   .footer-col form button {
     margin: 10px 0 0 0;
   }
-}
+} */
 
 /* end footer section*/
