@@ -2,6 +2,7 @@ body {
   font-family: 'Poppins', sans-serif;
   color: #000000;
   background-color: #ffffff;
+  margin-top: 0%;
 }
 
 .layout_padding {
@@ -33,7 +34,7 @@ body {
 .custom_dark-btn,
 .custom_orange-btn {
   display: inline-block;
-  padding: 10px 0;
+  padding: 10px 100%;
   text-align: center;
   width: 145px;
   outline: none;
@@ -602,9 +603,9 @@ a:focus {
   gap: 30px;
   cursor: pointer;
 }
-.footer-col-md-3 .social-container h5 {
+/* .footer-col-md-3 .social-container h5 {
 
-}
+} */
 
 .footer-col .icons i {
   color: #afb6c7;
