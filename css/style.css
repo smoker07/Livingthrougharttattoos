@@ -2,7 +2,6 @@ body {
   font-family: 'Poppins', sans-serif;
   color: #000000;
   background-color: #f3f2f2;
-  margin-top: 0;
 }
 
 .layout_padding {
@@ -34,7 +33,7 @@ body {
 .custom_dark-btn,
 .custom_orange-btn {
   display: inline-block;
-  padding: 10px 100%;
+  padding: 10px 0%;
   text-align: center;
   width: 145px;
   outline: none;
@@ -128,18 +127,6 @@ a:focus {
   color: #fafcfd;
 }
 
-.custom_nav-container .nav_search-btn {
-  background-image: url(../images/search-icon.png);
-
-  background-size: 22px;
-  background-repeat: no-repeat;
-  background-position-y: 7px;
-  width: 35px;
-  height: 35px;
-  padding: 0;
-  border: none;
-}
-
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -193,7 +180,9 @@ a:focus {
 
 /* slider section */
 .slider_section {
-  padding-top: 0%;
+  padding-top: 2%;
+  display: flex;
+  align-content: center;
 }
 
 .slider_item-box {
@@ -206,7 +195,7 @@ a:focus {
 }
 
 .slider_img-box {
-  width: 85%;
+  width: 75%;
   margin: 0 auto;
 }
 
