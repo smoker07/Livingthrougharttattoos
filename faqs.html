@@ -37,7 +37,7 @@
       <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
           <a class="navbar-brand" href="index.html">
-            <img src="images/LTAT.logo.jpg" alt="" /></a>
+            <img src="images/LTAT.logo.png" alt="" /></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -77,172 +77,182 @@
     <!-- end header section -->
 
     <style>
-        :root {
-          --primary: #000000;
-          --bg: #f8f9fc;
-          --text: #333;
-          --radius: 10px;
-        }
-    
-        body {
-          margin: 0;
-          font-family: 'Segoe UI', sans-serif;
-          background: var(--bg);
-          color: var(--text);
-          padding: 2rem;
-        }
-    
-        .faq-container {
-          max-width: 800px;
-          margin: auto;
-          background: rgb(205, 205, 205);
-          padding: 2rem;
-          border-radius: var(--radius);
-          box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-        }
-    
-        h1 {
-          text-align: center;
-          margin-bottom: 2rem;
-          color: var(--primary);
-        }
-    
-        .faq {
-          border-bottom: 1px solid #e0e0e0;
-        }
-    
-        .faq:last-child {
-          border-bottom: none;
-        }
-    
-        .faq input[type="checkbox"] {
-          display: none;
-        }
-    
-        .faq-label {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          cursor: pointer;
-          font-weight: bold;
-          padding: 1rem 0;
-        }
-    
-        .faq-label::after {
-          content: '+';
-          font-size: 1.5rem;
-          transition: transform 0.3s ease;
-        }
-    
-        .faq input:checked + .faq-label::after {
-          transform: rotate(90deg);
-        }
-    
-        .faq-content {
-          max-height: 0;
-          overflow: hidden;
-          transition: max-height 0.4s ease;
-          padding-left: 1rem;
-          color: #333333;
-          background-color: #FFF;
-        }
-    
-        .faq input:checked ~ .faq-content {
-          max-height: 200px;
-          padding-bottom: 1rem;
-        }
-    
-        @media (max-width: 600px) {
-          body {
-            padding: 1rem;
-          }
-    
-          .faq-container {
-            padding: 1.2rem;
-          }
-    
-          .faq-label {
-            font-size: 1rem;
-          }
-        }
-      </style>
+      .faq-container {
+max-width: 700px;
+margin: 40px auto;
+padding: 20px;
+font-family: 'Segoe UI', sans-serif;
+color: #333;
+}
 
-    <div class="faq-container">
-        <h1>Frequently Asked Questions</h1>
-    
-        <div class="faq">
-          <input type="checkbox" id="q1">
-          <label for="q1" class="faq-label">Where is your studio located?</label>
-          <div class="faq-content">
-            It is located in Indirapuram, Ghaziabad opposite to Jaipuria Mall.
-          </div>
-        </div>
-    
-        <div class="faq">
-          <input type="checkbox" id="q2">
-          <label for="q2" class="faq-label">What type of services are provided at your place?</label>
-          <div class="faq-content">
-            We, Living through Art Tattoos, expertise in a range of different style of tattooing which includes realism, fineline and many more common and loveable styles that the masses prefer and also piercings which may range from standard ear lobes to cartilage, nose piercing to the more intricate septum and inner ear piercings and body piercings of kind, done with surgical needles. 
+.faq-container h2 {
+text-align: center;
+font-size: 2rem;
+margin-bottom: 30px;
+text-transform: uppercase;
+color: rgb(0, 0, 0);
+box-shadow: 2px 2px 3px #ff1f1f;
+}
 
-          </div>
-        </div>
-    
-        <div class="faq">
-          <input type="checkbox" id="q3">
-          <label for="q3" class="faq-label">How do I take care of my tattoos?</label>
-          <div class="faq-content">
-            ◦ Keep your tattoo clean (clean it twice a day using wet wipes, non alcoholic or baby wipes are recommended)</br> 
-	        ◦	Moisturise your tattoo twice daily using antibiotic and unscented moisturisers (cetaphil body lotion is recommended)</br>
-	        ◦	Avoid contact with water and soap for 10-12 days. Use a plastic sheet or baby oil to save from it.</br>
-	        ◦	Don't pick on your tattoos, Peeling might cause damage to the skin and may cause cause fading</br>
-	        ◦	Wear breathable clothing over your tattooed area, as friction due to synthetics material may cause irritation or redness.</br>
-	        ◦	Always clean your hands before touching the tattooed area.
+.faq-item {
+border-bottom: 1px solid #ddd;
+padding: 10px 0;
+}
 
-          </div>
-        </div>
+.faq-question {
+background: none;
+border: none;
+font-size: 1.1rem;
+font-weight: bold;
+cursor: pointer;
+width: 100%;
+text-align: left;
+padding: 12px 0;
+position: relative;
+transition: color 0.3s ease;
+outline: none;
+}
+
+.faq-question::after {
+content: '+';
+position: absolute;
+right: 0;
+top: 12px;
+font-size: 1.5rem;
+transition: transform 0.3s ease;
+}
+
+.faq-question.active::after {
+content: '-';
+}
+
+.faq-answer {
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.4s ease, padding 0.4s ease;
+font-size: 0.95rem;
+line-height: 1.6;
+color: #555;
+padding: 0 0;
+}
+
+.faq-answer.show {
+padding: 10px 0;
+max-height: 300px; /* max-height should be large enough for any answer */
+}
+
+/* Responsive Tweaks */
+@media (max-width: 600px) {
+.faq-container {
+  padding: 15px;
+}
+
+.faq-container h2 {
+  font-size: 1.5rem;
+}
+
+.faq-question {
+  font-size: 1rem;
+  padding-right: 30px;
+}
+
+.faq-question::after {
+  top: 10px;
+  font-size: 1.3rem;
+}
+
+.faq-answer {
+  font-size: 0.9rem;
+}
+}
+
+  </style>
+
+
+<div class="faq-container">
+  <h2><b>Frequently Asked Questions</b></h2>
+  <div class="faq-item">
+    <button class="faq-question">Where is your studio located?</button>
+    <div class="faq-answer">It is located in Indirapuram, Ghaziabad opposite to Jaipuria Mall.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question">What type of services are provided at your place?</button>
+    <div class="faq-answer">We, Living through Art Tattoos, expertise in a range of different style of tattooing which includes realism, fineline and many more common and loveable styles that the masses prefer and also piercings which may range from standard ear lobes to cartilage, nose piercing to the more intricate septum and inner ear piercings and body piercings of kind, done with surgical needles. </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question">How do I take care of my tattoos?</button>
+    <div class="faq-answer">
+      ◦ Keep your tattoo clean (clean it twice a day using wet wipes, non alcoholic or baby wipes are recommended)</br> 
+      ◦	Moisturise your tattoo twice daily using antibiotic and unscented moisturisers (cetaphil body lotion is recommended)</br>
+      ◦	Avoid contact with water and soap for 10-12 days. Use a plastic sheet or baby oil to save from it.</br>
+      ◦	Don't pick on your tattoos, Peeling might cause damage to the skin and may cause cause fading</br>
+      ◦	Wear breathable clothing over your tattooed area, as friction due to synthetics material may cause irritation or redness.</br>
+      ◦	Always clean your hands before touching the tattooed area.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">How to take care of your piercings ?</button>
+    <div class="faq-answer">
+      Keep your piercing clean using saline solution. Take a bowl of lukewarm water, add two pinches of salt in it and mix. Take a cotton bud and clean both side of your pierced holes properly. Do this twice a day for 15 days for best results.</br>
+      You may have to follow this routine more in case of different piercing positions.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What material is best for your piercing ?</button>
+    <div class="faq-answer">
+      Here, At Living through Art Tattoos, we always recommend the best to our clients, hence we Suggest and pierce with surgical quality stainless steel for piercing and titanium in some cases. </br>
+      The piercing is done intricately through a needle and is closed with a variety of good quality jewellery that we use during the process.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Is there a particular weather where should I get piercing or any weather where I shouldn't get them done?</button>
+    <div class="faq-answer">
+      There's no particular weather or month where getting a piercing would harm. If you follow the aftercare provided by your tattoo artist and adhere to them, any season or month would be perfect for your dream piercing.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">How much time does it take to heal tattoos?</button>
+    <div class="faq-answer">
+      If your follow the aftercare provided by your artist and your tattoo heals smoothly. It should heal within 2 week(14 days) from the original time it was tattooed 
+      Although deep into the skin, the tattoo healing still takes place and finishes around 40-45 days from the time it was tattooed. </br>
+      The one tattooed, however must only take good care of it for the initial 2 weeks. As the upper layers are usually healed within that time frame. 
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Should I apply coconut oil, Vaseline or others thick oil on my tattoo or piercings?</button>
+    <div class="faq-answer">
+      No, it is not advisable to apply coconut oil or Vaseline on either your tattoos or piercings. As they tend stay on the surface for quite some while, and keeps the tattooed or piercing area which is healing, wet and which may cause the dirt in the area to collect and form a layer on the wet surface. </br>
+                Follow the prescribed aftercare given by your artist for the best results. 
+    </div>
+  </div>
     
-        <div class="faq">
-          <input type="checkbox" id="q4">
-          <label for="q4" class="faq-label">How to take care of your piercings ?</label>
-          <div class="faq-content">
-            Keep your piercing clean using saline solution. Take a bowl of lukewarm water, add two pinches of salt in it and mix. Take a cotton bud and clean both side of your pierced holes properly. Do this twice a day for 15 days for best results.</br>
-            You may have to follow this routine more in case of different piercing positions.  
-          </div>
-        </div>
-        <div class="faq">
-            <input type="checkbox" id="q5">
-            <label for="q5" class="faq-label">What material is best for your piercing ? </label>
-            <div class="faq-content">
-                Here, At Living through Art Tattoos, we always recommend the best to our clients, hence we Suggest and pierce with surgical quality stainless steel for piercing and titanium in some cases. </br>
-                The piercing is done intricately through a needle and is closed with a variety of good quality jewellery that we use during the process.
-            </div>
-        </div>
-        <div class="faq">
-            <input type="checkbox" id="q6">
-            <label for="q6" class="faq-label">Is there a particular weather where should I get piercing or any weather where I shouldn't get them done? </label>
-            <div class="faq-content">
-                There's no particular weather or month where getting a piercing would harm. If you follow the aftercare provided by your tattoo artist and adhere to them, any season or month would be perfect for your dream piercing. 
-            </div>
-        </div>
-        <div class="faq">
-            <input type="checkbox" id="q7">
-            <label for="q7" class="faq-label">How much time does it take to heal tattoos?</label>
-            <div class="faq-content">
-                If your follow the aftercare provided by your artist and your tattoo heals smoothly. It should heal within 2 week(14 days) from the original time it was tattooed 
-                Although deep into the skin, the tattoo healing still takes place and finishes around 40-45 days from the time it was tattooed. </br>
-                The one tattooed, however must only take good care of it for the initial 2 weeks. As the upper layers are usually healed within that time frame. 
-            </div>
-        </div>
-        <div class="faq">
-            <input type="checkbox" id="q8">
-            <label for="q8" class="faq-label">Should I apply coconut oil, Vaseline or others thick oil on my tattoo or piercings?</label>
-            <div class="faq-content">
-                No, it is not advisable to apply coconut oil or Vaseline on either your tattoos or piercings. As they tend stay on the surface for quite some while, and keeps the tattooed or piercing area which is healing, wet and which may cause the dirt in the area to collect and form a layer on the wet surface. </br>
-                Follow the prescribed aftercare given by your artist for the best results.
-            </div>
-        </div>
-    
-      </div>
+</div>
+
+    <script>
+      const questions = document.querySelectorAll('.faq-question');
+
+questions.forEach((question) => {
+question.addEventListener('click', () => {
+  // Collapse all answers
+  questions.forEach((q) => {
+    if (q !== question) {
+      q.classList.remove('active');
+      q.nextElementSibling.classList.remove('show');
+    }
+  });
+
+  // Toggle clicked one
+  question.classList.toggle('active');
+  const answer = question.nextElementSibling;
+  answer.classList.toggle('show');
+});
+});
+</script>
 
   <!-- WhatsApp Button -->
 <div>  
@@ -278,6 +288,39 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </div>
     <!-- End Whatsapp Button -->
+
+    <!-- Call Button -->
+    <div>
+      <a href="tel:+91 7570903554" class="call-button" traget="_blank">
+      <i class="fa fa-phone"></i></a>
+
+      <style>
+          .call-button {
+              position: fixed;
+              width: 50px;
+              height: 50px;
+              bottom: 75px;
+              right: 30px;
+              background-color: rgb(0, 174, 255);
+              color: #ffffff;
+              border-radius: 40px;
+              text-align: center;
+              font-size: 35px;
+              box-shadow: 2px 2px 3px #999;
+              z-index: 100;
+          }
+      
+          .call-button:hover {
+            color: rgb(1, 193, 193);
+            background-color: #ffffff;}
+          .call-button {
+           margin-top: 6px;
+          }
+      </style>   
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </div>
+  <!-- End Call Button -->
+
 
   <!-- Main Footer Start -->
   <footer>

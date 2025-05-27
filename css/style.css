@@ -149,6 +149,14 @@ a:focus {
   width: 180px;
   height: 65px;
   margin-right: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(144, 144, 144, 0.15);
+  opacity: 0.9;
 }
 
 .navbar-brand span {
