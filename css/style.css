@@ -97,7 +97,7 @@ body {
 .custom_nav-container.navbar-expand-lg .navbar-nav .nav-link {
   padding: 10px 30px;
   color: #343434;
-  text-align: center
+  text-align: center;
 }
 
 a,
@@ -181,8 +181,8 @@ a:focus {
 /* slider section */
 .slider_section {
   padding-top: 2%;
-  display: flex;
-  align-content: center;
+  /* display: flex;
+  align-content: center; */
 }
 
 .slider_item-box {
@@ -327,7 +327,7 @@ a:focus {
   height: 500px;
   background-image: url(../images/passionate.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -357,7 +357,7 @@ a:focus {
 }
 
 .client_img-box img {
-  width: 80px;
+  width: 100px;
 }
 
 .client_container h3 {
@@ -450,7 +450,7 @@ a:focus {
 }
 
 .info_section ul li {
-  /* margin: 3px 0; */
+  margin: 3px 0;
   font-size: small;
 
 }
