@@ -27,10 +27,23 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+  <!-- Socials Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
+    <!-- ? Preloader Start -->
+  <div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-inner position-relative">
+            <div class="preloader-circle"></div>
+            <div class="preloader-img pere-text">
+                <img src="Stuff/LTAT.logo.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Preloader Start -->
   <div class="hero_area sub_pages">
     <!-- header section strats -->
     <header class="header_section">
@@ -47,26 +60,23 @@
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="index.html"><b>Home</b> <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="aboutus.html" target="_blank"> About us</a>
+                  <a class="nav-link" href="aboutus.html" target="_blank"><b>About us</b></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="service.html" target="_blank"> Services </a>
+                  <a class="nav-link" href="service.html" target="_blank"><b>Services</b></a>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="artgallery.html"> Art Gallery </a></li>
+                <li class="nav-item"><a class="nav-link" href="artgallery.html"><b>Art Gallery</b></a></li>
                 <li class="nav-item">
-                  <a class="nav-link" href="contact.html" target="_blank">Contact us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="faqs.html" target="_blank"> FAQs</a>
+                    <a class="nav-link" href="faqs.html" target="_blank"><b>FAQs</b></a>
                   </li>
               </ul>
               
             </div>
             <div class="quote_btn-container ml-0 ml-lg-4 d-flex justify-content-center">
-              <a href="">
+              <a href="contact.html">
                 Contact us
               </a>
             </div>
@@ -102,13 +112,14 @@ padding: 10px 8px;
 
 .faq-question {
 background: transparent;
-border: transparent;
-font-size: 1.1rem;
+border: black;
+font-size: 1.0rem;
 font-weight: bold;
 cursor: pointer;
 width: 100%;
 text-align: left;
-padding: 12px 0;
+padding: 15px 10px;
+padding-right: 10px;
 position: relative;
 transition: color 0.3s ease;
 outline: none;
@@ -118,7 +129,8 @@ outline: none;
 content: '+';
 position: absolute;
 right: 0;
-top: 12px;
+top: 8px;
+right: 8px;
 font-size: 1.5rem;
 transition: transform 0.3s ease;
 }
@@ -257,133 +269,193 @@ question.addEventListener('click', () => {
 
   <!-- WhatsApp Button -->
 <div>  
-  <a href="https://wa.me/9667769036" class="whatsapp-float" target="_blank">
-        <i class="fa fa-whatsapp whatsapp-icon"></i>
-      </a>
-      
-      <style>
-        .whatsapp-float {
-          position: fixed;
-          width: 50px;
-          height: 50px;
-          bottom: 8px; 
-          right: 30px;
-          background-color: #25D366;
-          color: #FFF;
-          border-radius: 40px;
-          text-align: center;
-          font-size: 35px;
-          box-shadow: 2px 2px 3px #999;
-          z-index: 100;
-        }
-        .whatsapp-float:hover {
-          background-color: #FFF;
-        }
+    <a href="https://wa.me/9667769036" class="whatsapp-float" target="_blank">
+          <i class="fa fa-whatsapp whatsapp-icon"></i>
+        </a>
         
-        .whatsapp-icon {
-          margin-top: 6px;
-        }
-        </style>
-      
-      <!-- Add Font Awesome for the icon -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </div>
-    <!-- End Whatsapp Button -->
-
-    <!-- Call Button -->
-    <div>
-      <a href="tel:+91 7570903554" class="call-button" traget="_blank">
-      <i class="fa fa-phone"></i></a>
-
-      <style>
-          .call-button {
-              position: fixed;
-              width: 50px;
-              height: 50px;
-              bottom: 75px;
-              right: 30px;
-              background-color: rgb(0, 174, 255);
-              color: #ffffff;
-              border-radius: 40px;
-              text-align: center;
-              font-size: 35px;
-              box-shadow: 2px 2px 3px #999;
-              z-index: 100;
+        <style>
+          .whatsapp-float {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            bottom: 18px; 
+            right: 30px;
+            background-color: #25D366;
+            color: #FFF;
+            border-radius: 40px;
+            text-align: center;
+            font-size: 35px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
           }
-      
-          .call-button:hover {
-            color: rgb(1, 193, 193);
-            background-color: #ffffff;}
-          .call-button {
-           margin-top: 6px;
+          .whatsapp-float:hover {
+            color: #25D366;
+            background-color: #FFF;
           }
-      </style>   
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </div>
-  <!-- End Call Button -->
-
-
-  <!-- Main Footer Start -->
-  <footer>
-    <img class="logo" src="images/logo2.JPG" />
-    <div class="socials">
-        <a class="fa-brands fa-pinterest" href="https://www.in.pinterest.com/" target="_blank"></a>
-        <a class="fa-brands fa-instagram" href="https://www.instagram.com/" target="_blank"></a>
-        <a class="fa-brands fa-youtube" href="https://www.youtube.com/" target="_blank"></a>
-        <!-- Add more Buttons -->
-    </div>
-    <div class="links">
-        <ul>
-            <li><h2>Resources</h2></li>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="aboutus.html" target="_blank">About Us</a></li>
-            <li><a href="service.html" target="_blank">Services</a></li>
-            <li><a href="#" target="_blank">Art Gallery</a></li>
-            <li><a href="faqs.html" target="_blank">FAQs</a></li>
-            <li><a href="contact.html" target="_blank">Contact Us</a></li>
-        </ul>
-        <ul>
-            <li><h2>Piercing</h2></li>
-            <li><a>Ear Lobe</a></li>
-            <li><a>Cartilage</a></li>
-            <li><a>Nose</a></li>
-            <li><a>Eyebrow</a></li>
-            <li><a>Lips & Labret</a></li>
-            <li><a>Tongue</a></li>
-            <li><a>Navel(Belly Button)</a></li>
-            <li><a>Jewelery Care & After Care</a></li>
-            <!-- Add more list items-->
-        </ul>
-        <ul>
-            <li><h2>Tattoos</h2></li>
-            <li><a>Color Tattoos</a></li>
-            <li><a>Fine Lines Tattoos</a></li>
-            <li><a>Tattoos Touch-ups</a></li>
-            <li><a>Cover-ups Tattoos</a></li>
-            <li><a>Black & Grey Tattoos</a></li>
-            <li><a>Custom Tattoos Design</a></li>
-            <li><a>Realism & Portraits Tattoos</a></li>
-            <li><a>Tattoos Aftercare Guidance</a></li>
-        </ul>
-        <ul>
-            <li><h2>Studio Timing</h2></li>
-            <li><a>Monday to Saturday</a></li>
-            <li><a>(10 AM - 6 PM)</a></li>
-        </ul>
-    </div>
-</footer>
-  <!-- Main Footer End -->
-
-<!-- footer section -->
-<section class="container-fluid footer_section">
-  <p>
-    Copyright &copy; 2025 All Rights Reserved By
-    <a href="index.html">Living Through Art Tattoos</a>
-  </p>
-</section>
-<!-- End footer section -->  
-
+          
+          .whatsapp-icon {
+            margin-top: 6px;
+          }
+          </style>
+        
+        <!-- Add Font Awesome for the icon -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      </div>
+      <!-- End Whatsapp Button -->
   
-</body>
-
-</html>
+      <!-- Call Button -->
+      <div>
+        <a href="tel:+91 7570903554" class="call-button" traget="_blank">
+        <i class="fa fa-phone"></i></a>
+  
+        <style>
+            .call-button {
+                position: fixed;
+                width: 50px;
+                height: 50px;
+                bottom: 75px;
+                right: 30px;
+                background-color: rgb(0, 174, 255);
+                color: #ffffff;
+                border-radius: 40px;
+                text-align: center;
+                font-size: 35px;
+                box-shadow: 2px 2px 3px #999;
+                z-index: 100;
+            }
+        
+            .call-button:hover {
+              color: rgb(1, 193, 193);
+              background-color: #ffffff;}
+            .call-button {
+             margin-top: 6px;
+            }
+        </style>   
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </div>
+    <!-- End Call Button -->
+  
+    <div class="social_container">
+        <h5><b>Follow Us</b></h5>
+        <div class="socials">
+          <a class="fa-brands fa-pinterest" href="https://in.pinterest.com/tusharbhalla0121/" target="_blank"></a>
+          <a class="fa-brands fa-instagram" href="https://www.instagram.com/livingthroughart__/" target="_blank"></a>
+          <a class="fa-brands fa-youtube" href="https://www.youtube.com/" target="_blank"></a>
+        </div>
+      </div>
+    
+      <section class="info_section layout_padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <h5><B>
+                Resources
+              </B></h5>
+              <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="aboutus.html" target="_blank">About Us</a></li>
+                  <li><a href="service.html" target="_blank">Services</a></li>
+                  <li><a href="artgallery.html" target="_blank">Art Gallery</a></li>
+                  <li><a href="faqs.html" target="_blank">FAQs</a></li>
+                  <li><a href="contact.html" target="_blank">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h5><B>
+                PIERCING
+              </B></h5>
+              <ul>
+                <li><a>Nose</a></li>
+                <li><a>Tongue</a></li>
+                <li><a>Ear Lobe</a></li>
+                <li><a>Eyebrow</a></li>
+                <li><a>Cartilage</a></li>
+                <li><a>Lips & Labret</a></li>
+                <li><a>Navel(Belly Button)</a></li>
+                <li><a>Jewelery Care & After Care</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h5><B>
+                Tattoos
+              </B></h5>
+              <ul>
+                  <li><a>Color Tattoos</a></li>
+                  <li><a>Fine Lines Tattoos</a></li>
+                  <li><a>Tattoos Touch-ups</a></li>
+                  <li><a>Cover-ups Tattoos</a></li>
+                  <li><a>Black & Grey Tattoos</a></li>
+                  <li><a>Custom Tattoos Design</a></li>
+                  <li><a>Realism & Portraits Tattoos</a></li>
+                  <li><a>Tattoos Aftercare Guidance</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <div class="col-md-3">
+                <h5><B>
+                  STUDIO TIMING
+                </B></h5>
+                <ul>
+                  <li><a>Monday to Saturday</a></li>
+                  <li><a>(12 PM - 8 PM)</a></li>
+                  <li><a>Sunday Closed</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    
+    
+    
+      <!-- footer section -->
+      <section class="container-fluid footer_section">
+        <p>
+          Copyright &copy; 2025 All Rights Reserved By
+          <a href="index.html"><b>Living Through Art Tattoos</b></a>
+        </p>
+      </section>
+      <!-- footer section -->
+    
+      <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.js"></script>
+    
+      <!-- <script>
+        
+        function initMap() {
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 11,
+            center: {
+              lat: 40.645037,
+              lng: -73.880224
+            },
+          });
+    
+          var image = 'images/maps-and-flags.png';
+          var beachMarker = new google.maps.Marker({
+            position: {
+              lat: 40.645037,
+              lng: -73.880224
+            },
+            map: map,
+            icon: image
+          });
+        }
+      </script> -->
+      <!-- google map js -->
+      <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap">
+      </script> -->
+      <!-- end google map js -->
+      <script>
+        window.addEventListener('load', function () {
+          const preloader = document.querySelector('.preloader');
+          preloader.style.opacity = '0';
+          setTimeout(() => {
+            preloader.style.display = 'none';
+          }, 600); // matches the .6s CSS transition
+        });
+      </script>
+    </body>
+    
+    </html>
